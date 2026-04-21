@@ -4,7 +4,6 @@
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Star Link Media</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--g:#c9a84c;--g2:#e8c97a;--g3:rgba(201,168,76,.1);--bg:#05050a;--bg2:#08080e;--bg3:#0d0d16;--text:#f0eeea;--muted:rgba(240,238,234,.4);--border:rgba(201,168,76,.12)}
@@ -12,8 +11,6 @@ html{font-size:16px}body{background:var(--bg);color:var(--text);font-family:'Int
 a{text-decoration:none;color:inherit}
 h1,h2,h3{font-family:'Cormorant Garamond',serif}
 .page{display:none;min-height:100vh}.page.active{display:block}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--border);background:rgba(5,5,10,.97);backdrop-filter:blur(20px)}
 .logo{display:flex;align-items:center;gap:.7rem;cursor:pointer;flex-shrink:0}
 .logo svg{width:36px;height:36px}
@@ -36,8 +33,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .mob a{font-size:1.3rem;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--text);cursor:pointer;letter-spacing:.05em;transition:color .2s}
 .mob a:hover{color:var(--g)}
 .mob .mc{font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;background:var(--g);color:var(--bg);padding:.9rem 2.5rem}
-
-/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:9rem 5% 6rem;position:relative;overflow:hidden}
 .hero-tl{position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--g),transparent);opacity:.4}
 .hero-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(ellipse,rgba(201,168,76,.06),transparent 60%);pointer-events:none}
@@ -54,30 +49,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .bg:hover{background:var(--g2)}
 .bog{background:transparent;color:var(--text);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.8rem;border:1px solid rgba(240,238,234,.15);font-family:'Inter',sans-serif;transition:all .2s;cursor:pointer}
 .bog:hover{border-color:var(--g);color:var(--g)}
-
-/* MARQUEE */
 .mq{overflow:hidden;padding:1.4rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(201,168,76,.02)}
 .mq-t{display:flex;gap:3rem;width:max-content;animation:mq 30s linear infinite}
 @keyframes mq{to{transform:translateX(-50%)}}
 .mi{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:.9rem;font-family:'Inter',sans-serif}
 .mi.h{color:var(--g)}
 .ms{width:3px;height:3px;background:var(--g);border-radius:50%;opacity:.5}
-
-/* STATS */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .sb{padding:3rem 2rem;text-align:center;border-right:1px solid var(--border)}
 .sb:last-child{border-right:none}
 .sb strong{display:block;font-size:3rem;font-weight:700;color:var(--g);line-height:1;font-family:'Cormorant Garamond',serif}
 .sb span{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.5rem;display:block;font-family:'Inter',sans-serif}
-
-/* SECTIONS */
 .sec{padding:6rem 5%}.si{max-width:1100px;margin:0 auto}
 .stag{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--g);font-weight:500;margin-bottom:.8rem;display:flex;align-items:center;gap:.7rem;font-family:'Inter',sans-serif}
 .stag::before{content:'';width:24px;height:.5px;background:var(--g)}
 .sh{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:700;letter-spacing:-.01em;margin-bottom:1rem;line-height:1}
 .sp{color:var(--muted);font-size:.93rem;max-width:460px;line-height:1.95;margin-bottom:3rem;font-family:'Inter',sans-serif}
-
-/* FEATURE CARDS */
 .feat-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .fc-card{border:1px solid var(--border);padding:2.2rem;transition:all .3s;cursor:default;position:relative}
 .fc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--g),transparent);opacity:0;transition:opacity .3s}
@@ -87,8 +74,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .fc-d{font-size:.85rem;color:var(--muted);line-height:1.85;font-family:'Inter',sans-serif}
 .pills{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.2rem}
 .pill{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--g);background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.18);padding:.22rem .7rem;font-family:'Inter',sans-serif}
-
-/* WHY */
 .why-band{padding:6rem 5%;background:var(--bg2);border-top:1px solid var(--border)}
 .wg{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1100px;margin:3.5rem auto 0}
 .wc{border:1px solid var(--border);padding:2.2rem;transition:border-color .3s;position:relative}
@@ -97,8 +82,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .wc-n{font-size:.58rem;letter-spacing:.22em;color:rgba(201,168,76,.35);font-weight:600;text-transform:uppercase;margin-bottom:1rem;font-family:'Inter',sans-serif}
 .wc h4{font-size:1.05rem;font-weight:600;margin-bottom:.5rem;letter-spacing:-.01em}
 .wc p{font-size:.85rem;color:var(--muted);line-height:1.8;font-family:'Inter',sans-serif}
-
-/* CTA BAND */
 .cta-band{padding:8rem 5%;text-align:center;border-top:1px solid var(--border);position:relative}
 .cta-band::before,.cta-band::after{content:'';position:absolute;left:5%;right:5%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.3),transparent)}
 .cta-band::before{top:0}.cta-band::after{bottom:0}
@@ -106,8 +89,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .cta-band h2 em{color:var(--g);font-style:normal}
 .cta-band p{color:var(--muted);font-size:.97rem;max-width:460px;margin:0 auto 2.8rem;line-height:1.95;font-family:'Inter',sans-serif}
 .cta-btns{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap}
-
-/* SERVICES PAGE */
 .svc-hero{padding:8rem 5% 4rem;max-width:1100px;margin:0 auto;text-align:center}
 .svc-hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:700;letter-spacing:-.01em;margin-bottom:1rem;line-height:1}
 .svc-hero h1 em{color:var(--g);font-style:normal}
@@ -123,8 +104,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .sc-ico{font-size:24px;margin-bottom:1.5rem;opacity:.75}
 .sc-t{font-size:1.1rem;font-weight:600;margin-bottom:.7rem;letter-spacing:-.01em}
 .sc-d{font-size:.85rem;color:var(--muted);line-height:1.85;font-family:'Inter',sans-serif}
-
-/* PROCESS */
 .process-sec{padding:5rem 5%;background:var(--bg2);border-top:1px solid var(--border)}
 .proc-inner{max-width:1100px;margin:0 auto}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);margin-top:3.5rem}
@@ -135,8 +114,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .sn{font-size:2.8rem;font-weight:700;color:var(--g);opacity:.2;line-height:1;margin-bottom:1.5rem;font-family:'Cormorant Garamond',serif}
 .st{font-size:.95rem;font-weight:600;margin-bottom:.5rem;letter-spacing:-.01em}
 .sd{font-size:.83rem;color:var(--muted);line-height:1.8;font-family:'Inter',sans-serif}
-
-/* PRICING */
 .pricing-sec{padding:5rem 5%;max-width:1100px;margin:0 auto}
 .pricing-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
 .pc{border:1px solid var(--border);padding:2.5rem;position:relative;transition:border-color .3s}
@@ -154,8 +131,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .pc-btn:hover{background:var(--g3);border-color:var(--g)}
 .pc.featured .pc-btn{background:var(--g);color:var(--bg);border-color:var(--g)}
 .pc.featured .pc-btn:hover{background:var(--g2)}
-
-/* CONTACT PAGE */
 .contact-hero{padding:8rem 5% 4rem;max-width:1100px;margin:0 auto;text-align:center}
 .contact-hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:700;letter-spacing:-.01em;margin-bottom:1rem;line-height:1}
 .contact-hero h1 em{color:var(--g);font-style:normal}
@@ -173,8 +148,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .soc-links{display:flex;gap:.8rem;margin-top:1.5rem;flex-wrap:wrap}
 .sl{display:flex;align-items:center;gap:.5rem;background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);color:var(--g);font-size:.75rem;font-weight:600;padding:.5rem 1rem;transition:all .2s;cursor:pointer;font-family:'Inter',sans-serif}
 .sl:hover{background:var(--g);color:var(--bg);border-color:var(--g)}
-
-/* FORM */
 .cf{background:var(--bg3);border:1px solid var(--border);padding:3rem}
 .cf-r{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
 .cf-g{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
@@ -184,23 +157,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:.9rem 5%;display:fle
 .cf-g input::placeholder,.cf-g textarea::placeholder{color:rgba(240,238,234,.15)}
 .cf-g select option{background:var(--bg2)}
 .cf-g textarea{resize:vertical;min-height:110px}
-
-/* FORM SUBMIT BUTTONS */
 .form-btns{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.5rem}
 .btn-email{background:var(--g);color:var(--bg);padding:1rem;border:none;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;gap:.5rem}
 .btn-email:hover{background:var(--g2)}
 .btn-email:disabled{background:rgba(201,168,76,.4);cursor:not-allowed}
 .btn-wa{background:#25D366;color:#fff;padding:1rem;border:none;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:background .2s;display:flex;align-items:center;justify-content:center;gap:.5rem}
 .btn-wa:hover{background:#1ebe5d}
-.cf-note{text-align:center;color:var(--muted);font-size:.7rem;margin-top:.8rem;font-family:'Inter',sans-serif}
+.cf-note{text-align:center;font-size:.7rem;color:var(--muted);margin-top:.8rem;font-family:'Inter',sans-serif}
 .form-status{text-align:center;font-size:.82rem;font-family:'Inter',sans-serif;padding:.7rem;margin-top:.5rem;border-radius:4px;display:none}
 .form-status.ok{background:rgba(34,197,94,.1);color:#4ade80;border:1px solid rgba(34,197,94,.2);display:block}
 .form-status.err{background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.2);display:block}
-
-/* EMAILJS SETUP NOTICE */
-None
-
-/* FAQ */
 .faq-sec{padding:4rem 5%;background:var(--bg2);border-top:1px solid var(--border)}
 .faq-inner{max-width:700px;margin:0 auto}
 .faq-item{border-bottom:1px solid var(--border);padding:1.4rem 0}
@@ -209,8 +175,6 @@ None
 .faq-item.open .faq-q::after{content:'−';font-size:1.3rem}
 .faq-a{font-size:.85rem;color:var(--muted);line-height:1.8;display:none;font-family:'Inter',sans-serif}
 .faq-item.open .faq-a{display:block}
-
-/* FOOTER */
 footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2rem}
 .ft{max-width:1100px;margin:0 auto}
 .ft-t{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
@@ -226,8 +190,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
 .ft-s{display:flex;gap:.6rem}
 .fs{width:32px;height:32px;border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.7rem;font-weight:600;transition:all .2s;cursor:pointer;font-family:'Inter',sans-serif}
 .fs:hover{border-color:var(--g);color:var(--g)}
-
-/* AI WIDGET */
 #fab{position:fixed;bottom:2rem;right:2rem;z-index:1000;width:56px;height:56px;background:var(--g);border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--bg);box-shadow:0 4px 24px rgba(201,168,76,.3);transition:transform .2s}
 #fab:hover{transform:scale(1.08)}
 .fbadge{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#ef4444;border-radius:50%;border:2px solid var(--bg)}
@@ -253,7 +215,6 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
 .typing span{width:6px;height:6px;background:var(--g);border-radius:50%;animation:blink 1.2s ease-in-out infinite;display:inline-block;margin:0 2px;opacity:.3}
 .typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}
 @keyframes blink{0%,80%,100%{opacity:.2}40%{opacity:1}}
-
 @media(max-width:1024px){.cg{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.sb:nth-child(2){border-right:none}.sb:nth-child(3){border-top:1px solid var(--border)}.ft-t{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.wg{grid-template-columns:1fr}.pricing-g{grid-template-columns:1fr}.form-btns{grid-template-columns:1fr}}
 @media(max-width:768px){.nl{display:none!important}.nbtn{display:none}.ham{display:flex}.feat-g,.svc-full{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.ft-t{grid-template-columns:1fr}#panel{width:calc(100vw - 2rem);right:1rem}.cf-r{grid-template-columns:1fr}.form-btns{grid-template-columns:1fr}}
 </style>
@@ -261,20 +222,16 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
 <body>
 
 <svg width="0" height="0" style="position:absolute"><defs><symbol id="logo" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="46" fill="#0d0d1f" stroke="#c9a84c" stroke-width=".8" opacity=".7"/>
-  <rect x="27" y="27" width="46" height="46" fill="none" stroke="#7c5cfc" stroke-width=".9" opacity=".8"/>
-  <ellipse cx="50" cy="50" rx="43" ry="15" fill="none" stroke="#ff6eb4" stroke-width="1" opacity=".7" transform="rotate(-35 50 50)"/>
-  <ellipse cx="50" cy="50" rx="43" ry="15" fill="none" stroke="#c9a84c" stroke-width="1" opacity=".6" transform="rotate(25 50 50)"/>
-  <ellipse cx="50" cy="50" rx="43" ry="15" fill="none" stroke="#c9a84c" stroke-width=".7" opacity=".4" transform="rotate(80 50 50)"/>
-  <circle cx="50" cy="7" r="4" fill="#c9a84c"/>
-  <circle cx="50" cy="93" r="4" fill="#c9a84c"/>
-  <circle cx="7" cy="50" r="4" fill="#c9a84c"/>
-  <circle cx="93" cy="50" r="4" fill="#c9a84c"/>
-  <circle cx="27" cy="27" r="4.5" fill="#7c5cfc"/>
-  <circle cx="73" cy="27" r="4.5" fill="#7c5cfc"/>
-  <circle cx="27" cy="73" r="4.5" fill="#7c5cfc"/>
-  <circle cx="73" cy="73" r="4.5" fill="#7c5cfc"/>
-  <polygon points="50,20 55,34 70,34 59,43 63,57 50,49 37,57 41,43 30,34 45,34" fill="#c9a84c" stroke="#e8a000" stroke-width=".5"/>
+<circle cx="50" cy="50" r="46" fill="#0d0d1f" stroke="#c9a84c" stroke-width=".8" opacity=".7"/>
+<rect x="27" y="27" width="46" height="46" fill="none" stroke="#7c5cfc" stroke-width=".9" opacity=".8"/>
+<ellipse cx="50" cy="50" rx="43" ry="15" fill="none" stroke="#ff6eb4" stroke-width="1" opacity=".7" transform="rotate(-35 50 50)"/>
+<ellipse cx="50" cy="50" rx="43" ry="15" fill="none" stroke="#c9a84c" stroke-width="1" opacity=".6" transform="rotate(25 50 50)"/>
+<ellipse cx="50" cy="50" rx="43" ry="15" fill="none" stroke="#c9a84c" stroke-width=".7" opacity=".4" transform="rotate(80 50 50)"/>
+<circle cx="50" cy="7" r="4" fill="#c9a84c"/><circle cx="50" cy="93" r="4" fill="#c9a84c"/>
+<circle cx="7" cy="50" r="4" fill="#c9a84c"/><circle cx="93" cy="50" r="4" fill="#c9a84c"/>
+<circle cx="27" cy="27" r="4.5" fill="#7c5cfc"/><circle cx="73" cy="27" r="4.5" fill="#7c5cfc"/>
+<circle cx="27" cy="73" r="4.5" fill="#7c5cfc"/><circle cx="73" cy="73" r="4.5" fill="#7c5cfc"/>
+<polygon points="50,20 55,34 70,34 59,43 63,57 50,49 37,57 41,43 30,34 45,34" fill="#c9a84c" stroke="#e8a000" stroke-width=".5"/>
 </symbol></defs></svg>
 
 <nav>
@@ -294,10 +251,9 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
   <a class="mc" onclick="showPage('contact');closeMenu()">Get a Quote</a>
 </div>
 
-<!-- ======== PAGE: HOME ======== -->
+<!-- HOME -->
 <div class="page active" id="page-home">
-  <div class="hero">
-    <div class="hero-tl"></div><div class="hero-glow"></div>
+  <div class="hero"><div class="hero-tl"></div><div class="hero-glow"></div>
     <div class="eyebrow">Guyana's Premier Creative Agency</div>
     <svg class="hero-logo" viewBox="0 0 100 100"><use href="#logo"/></svg>
     <h1><span class="l1">We Design.</span><span class="l2">We Build.</span><span class="l3">We Deliver.</span></h1>
@@ -328,7 +284,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
   <footer><div class="ft"><div class="ft-t"><div class="ft-brand"><div class="ft-logo" onclick="showPage('home')"><svg width="26" height="26" viewBox="0 0 100 100"><use href="#logo"/></svg><span>STAR<em>LINK</em> MEDIA</span></div><p>Guyana's creative digital studio. Locally grounded, globally inspired.</p></div><div class="fcol"><h5>Pages</h5><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="fcol"><h5>Services</h5><ul><li><a onclick="showPage('services')">Graphic Design</a></li><li><a onclick="showPage('services')">Website Dev</a></li><li><a onclick="showPage('services')">Logo Design</a></li></ul></div><div class="fcol"><h5>Connect</h5><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="https://wa.me/5927639325">WhatsApp</a></li></ul></div></div><div class="ft-b"><span class="ft-copy">© 2026 Star Link Media · Georgetown, Guyana 🇬🇾</span><div class="ft-s"><span class="fs">IG</span><span class="fs">FB</span><span class="fs">WA</span></div></div></div></footer>
 </div>
 
-<!-- ======== PAGE: SERVICES ======== -->
+<!-- SERVICES -->
 <div class="page" id="page-services">
   <div class="svc-hero"><p class="stag" style="justify-content:center">What We Offer</p><h1>Our <em>Services</em></h1><p>Professional creative services for every Guyanese business — at prices that make sense locally.</p></div>
   <div class="svc-section">
@@ -352,13 +308,13 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
   <footer><div class="ft"><div class="ft-t"><div class="ft-brand"><div class="ft-logo" onclick="showPage('home')"><svg width="26" height="26" viewBox="0 0 100 100"><use href="#logo"/></svg><span>STAR<em>LINK</em> MEDIA</span></div><p>Guyana's creative digital studio. Locally grounded, globally inspired.</p></div><div class="fcol"><h5>Pages</h5><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="fcol"><h5>Services</h5><ul><li><a onclick="showPage('services')">Graphic Design</a></li><li><a onclick="showPage('services')">Website Dev</a></li><li><a onclick="showPage('services')">Logo Design</a></li></ul></div><div class="fcol"><h5>Connect</h5><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="https://wa.me/5927639325">WhatsApp</a></li></ul></div></div><div class="ft-b"><span class="ft-copy">© 2026 Star Link Media · Georgetown, Guyana 🇬🇾</span><div class="ft-s"><span class="fs">IG</span><span class="fs">FB</span><span class="fs">WA</span></div></div></div></footer>
 </div>
 
-<!-- ======== PAGE: CONTACT ======== -->
+<!-- CONTACT -->
 <div class="page" id="page-contact">
   <div class="contact-hero"><p class="stag" style="justify-content:center">Reach Us</p><h1>Start Your <em>Project</em></h1><p>Based right here in Georgetown. Same-day quotes in GYD or USD. No commitment required.</p></div>
   <div class="contact-body"><div class="cg">
     <div class="cl">
       <h2>Get In <em>Touch</em></h2>
-      <p>Tell us what you need and we'll get back to you the same day with a personalised quote. We look forward to working with you.</p>
+      <p>Tell us what you need and we'll get back to you the same day with a personalised quote.</p>
       <div class="cinfo">
         <div class="ci"><div class="ci-ic">📍</div><div class="ci-t"><strong>Location</strong><span>Georgetown, Guyana 🇬🇾</span></div></div>
         <div class="ci"><div class="ci-ic">✉️</div><div class="ci-t"><strong>Email</strong><span>asifhenry09@gmail.com</span></div></div>
@@ -368,24 +324,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
       <div class="soc-links">
         <a href="#" class="sl">📷 Instagram</a>
         <a href="#" class="sl">📘 Facebook</a>
-        <a href="https://wa.me/5927639325" target="_blank" class="sl">💬 WhatsApp Chat</a>
+        <a href="https://wa.me/5927639325" target="_blank" class="sl">💬 WhatsApp</a>
       </div>
     </div>
-
     <div class="cf">
-      <!-- EMAILJS SETUP INSTRUCTIONS -->
-      <div class="setup-box">
-        <h4>⚙️ Email Setup Required (One-Time · Free)</h4>
-        <p>To receive form submissions to <strong style="color:var(--g)">info@starlinkgy.com</strong>, complete these 3 quick steps:</p>
-        <ol>
-          <li>Go to <a href="https://www.emailjs.com" target="_blank">emailjs.com</a> and create a free account</li>
-          <li>Add an Email Service (Gmail or any inbox) → copy your <strong>Service ID</strong></li>
-          <li>Create an Email Template using the variables below → copy your <strong>Template ID</strong> and <strong>Public Key</strong></li>
-        </ol>
-        <p style="margin-top:.8rem">Template variables to include: <code>{{from_name}}</code> <code>{{from_email}}</code> <code>{{phone}}</code> <code>{{service}}</code> <code>{{budget}}</code> <code>{{message}}</code></p>
-        <p style="margin-top:.6rem">Then replace the 3 values in the code: <code>YOUR_PUBLIC_KEY</code> · <code>YOUR_SERVICE_ID</code> · <code>YOUR_TEMPLATE_ID</code></p>
-      </div>
-
       <div class="cf-r">
         <div class="cf-g"><label>First Name</label><input type="text" id="f_fname" placeholder="John"/></div>
         <div class="cf-g"><label>Last Name</label><input type="text" id="f_lname" placeholder="Doe"/></div>
@@ -401,24 +343,23 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
         <select id="f_budget"><option value="">Select budget...</option><option>Under G$50,000</option><option>G$50,000 – G$150,000</option><option>G$150,000 – G$500,000</option><option>G$500,000+</option><option>Let's discuss</option></select>
       </div>
       <div class="cf-g"><label>Project Details</label><textarea id="f_msg" placeholder="Tell us about your project — goals, timeline, inspirations..."></textarea></div>
-
       <div class="form-btns">
         <button class="btn-email" id="emailBtn" onclick="sendEmail()">✉️ Send via Email</button>
         <button class="btn-wa" onclick="sendWhatsApp()">💬 Send via WhatsApp</button>
       </div>
       <div class="form-status" id="fstatus"></div>
-      <p class="cf-note">Both options send your details to Star Link Media · Same-day response guaranteed</p>
+      <p class="cf-note">Both options send your details directly to Star Link Media · Same-day response guaranteed</p>
     </div>
   </div></div>
 
   <div class="faq-sec"><div class="faq-inner">
     <p class="stag" style="justify-content:center">FAQ</p>
     <h2 class="sh" style="text-align:center;margin-bottom:2.5rem">Common Questions</h2>
-    <div class="faq-item open"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does a project take?</div><div class="faq-a">Logos take 3–5 days, websites 1–3 weeks, and full brand packages 2–4 weeks. We always confirm timelines upfront before starting.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you quote in GYD or USD?</div><div class="faq-a">Both. We're flexible — GYD or USD, whichever works best for you and your business.</div></div>
+    <div class="faq-item open"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does a project take?</div><div class="faq-a">Logos take 3–5 days, websites 1–3 weeks, and full brand packages 2–4 weeks. We always confirm timelines upfront.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you quote in GYD or USD?</div><div class="faq-a">Both — GYD or USD, whichever works best for you.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many revisions do I get?</div><div class="faq-a">Unlimited revisions until you're 100% satisfied. We don't stop until you love the result.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can you work with businesses outside Georgetown?</div><div class="faq-a">Absolutely — Berbice, Linden, Essequibo and beyond. Everything is handled online so location is never a constraint.</div></div>
-    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What files will I receive?</div><div class="faq-a">All standard formats — PNG, JPG, PDF, SVG, AI and more. You own all files outright with no restrictions.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can you work with businesses outside Georgetown?</div><div class="faq-a">Absolutely — Berbice, Linden, Essequibo and beyond. Everything is handled online.</div></div>
+    <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What files will I receive?</div><div class="faq-a">All standard formats — PNG, JPG, PDF, SVG, AI and more. You own all files outright.</div></div>
   </div></div>
 
   <footer><div class="ft"><div class="ft-t"><div class="ft-brand"><div class="ft-logo" onclick="showPage('home')"><svg width="26" height="26" viewBox="0 0 100 100"><use href="#logo"/></svg><span>STAR<em>LINK</em> MEDIA</span></div><p>Guyana's creative digital studio. Locally grounded, globally inspired.</p></div><div class="fcol"><h5>Pages</h5><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div><div class="fcol"><h5>Services</h5><ul><li><a onclick="showPage('services')">Graphic Design</a></li><li><a onclick="showPage('services')">Website Dev</a></li><li><a onclick="showPage('services')">Logo Design</a></li></ul></div><div class="fcol"><h5>Connect</h5><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="https://wa.me/5927639325">WhatsApp</a></li></ul></div></div><div class="ft-b"><span class="ft-copy">© 2026 Star Link Media · Georgetown, Guyana 🇬🇾</span><div class="ft-s"><span class="fs">IG</span><span class="fs">FB</span><span class="fs">WA</span></div></div></div></footer>
@@ -429,56 +370,73 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 5% 2
 <div id="panel"><div class="ph"><div class="pav">✦</div><div class="phi"><strong>Star Link AI</strong><span>Get an instant quote</span></div><button class="pclose" onclick="toggleP()">✕</button></div><div class="pbody" id="pb"></div><div class="pinp" id="pinp" style="display:none"><input type="text" id="pi" placeholder="Type your answer..." onkeydown="if(event.key==='Enter')sf()"/><button class="psend" onclick="sf()">↑</button></div></div>
 
 <script>
-// ── EMAILJS CONFIG ── Replace these 3 values after setting up emailjs.com
-const EMAILJS_PUBLIC_KEY  = 'Cbz8WzKO09PkYbTrR';
-const EMAILJS_SERVICE_ID  = 'service_5ej9xig';
-const EMAILJS_TEMPLATE_ID = 'template_0qdughy';
-
-emailjs.init(EMAILJS_PUBLIC_KEY);
+// ── WEB3FORMS KEY ──
+const W3F_KEY = '3c52a3eb-308d-4136-884a-ca1910a9b3d5';
 
 function getFormData(){
   return {
-    from_name: (document.getElementById('f_fname').value+' '+document.getElementById('f_lname').value).trim(),
-    from_email: document.getElementById('f_email').value.trim(),
-    phone:    document.getElementById('f_phone').value.trim(),
-    service:  document.getElementById('f_service').value,
-    budget:   document.getElementById('f_budget').value,
-    message:  document.getElementById('f_msg').value.trim()
+    name: (document.getElementById('f_fname').value+' '+document.getElementById('f_lname').value).trim(),
+    email: document.getElementById('f_email').value.trim(),
+    phone: document.getElementById('f_phone').value.trim(),
+    service: document.getElementById('f_service').value,
+    budget: document.getElementById('f_budget').value,
+    message: document.getElementById('f_msg').value.trim()
   };
 }
 
 function validateForm(){
   const d=getFormData();
-  if(!d.from_name){alert('Please enter your name.');return false;}
-  if(!d.from_email||!d.from_email.includes('@')){alert('Please enter a valid email.');return false;}
+  if(!d.name||d.name.trim()===''){alert('Please enter your name.');return false;}
+  if(!d.email||!d.email.includes('@')){alert('Please enter a valid email.');return false;}
   if(!d.service){alert('Please select a service.');return false;}
   return true;
 }
 
-function sendEmail(){
+async function sendEmail(){
   if(!validateForm())return;
+  const d=getFormData();
   const btn=document.getElementById('emailBtn');
   const st=document.getElementById('fstatus');
-  btn.disabled=true;btn.textContent='Sending...';
-  if(EMAILJS_PUBLIC_KEY==='YOUR_PUBLIC_KEY'){
-    st.className='form-status err';
-    st.textContent='⚠️ EmailJS not configured yet. Follow the setup instructions above, then replace the 3 config values in the code.';
-    btn.disabled=false;btn.innerHTML='✉️ Send via Email';
-    return;
-  }
-  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, getFormData())
-    .then(()=>{
+  btn.disabled=true;
+  btn.innerHTML='Sending...';
+  st.className='form-status';st.style.display='none';
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        access_key: W3F_KEY,
+        subject: 'New Quote Request from '+d.name+' — Star Link Media',
+        from_name: 'Star Link Media Website',
+        name: d.name,
+        email: d.email,
+        phone: d.phone||'Not provided',
+        service: d.service,
+        budget: d.budget||'Not specified',
+        message: d.message||'No details provided',
+        botcheck: ''
+      })
+    });
+    const json=await res.json();
+    if(json.success){
       st.className='form-status ok';
       st.textContent='✦ Message sent! We\'ll get back to you today.';
       btn.innerHTML='✓ Sent!';
       btn.style.background='#2d6a3f';
-    })
-    .catch(e=>{
-      st.className='form-status err';
-      st.textContent='Something went wrong. Please try WhatsApp or call us directly.';
-      btn.disabled=false;btn.innerHTML='✉️ Send via Email';
-      console.error(e);
-    });
+      // clear form
+      ['f_fname','f_lname','f_email','f_phone','f_msg'].forEach(id=>document.getElementById(id).value='');
+      document.getElementById('f_service').selectedIndex=0;
+      document.getElementById('f_budget').selectedIndex=0;
+    } else {
+      throw new Error(json.message||'Failed');
+    }
+  } catch(e){
+    st.className='form-status err';
+    st.textContent='Something went wrong. Please use WhatsApp or call us directly.';
+    btn.disabled=false;
+    btn.innerHTML='✉️ Send via Email';
+    console.error(e);
+  }
 }
 
 function sendWhatsApp(){
@@ -486,18 +444,18 @@ function sendWhatsApp(){
   const d=getFormData();
   const msg=`*New Quote Request — Star Link Media*
 
-*Name:* ${d.from_name}
-*Email:* ${d.from_email}
+*Name:* ${d.name}
+*Email:* ${d.email}
 *Phone:* ${d.phone||'Not provided'}
 *Service:* ${d.service}
-*Budget:* ${d.budget}
+*Budget:* ${d.budget||'Not specified'}
 
 *Project Details:*
 ${d.message||'Not provided'}`;
   window.open('https://wa.me/5927639325?text='+encodeURIComponent(msg),'_blank');
 }
 
-// ── PAGE NAVIGATION ──
+// ── PAGE NAV ──
 function showPage(p){
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
@@ -508,7 +466,7 @@ function showPage(p){
 function toggleMenu(){const h=document.getElementById('ham'),m=document.getElementById('mob');h.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
 function closeMenu(){document.getElementById('ham').classList.remove('open');document.getElementById('mob').classList.remove('open');document.body.style.overflow='';}
 
-// ── AI QUOTE WIDGET ──
+// ── AI WIDGET ──
 const flow=[
   {b:"Welcome to Star Link Media. ✦ What service are you looking for?",o:["Graphic Design / Flyers","Website or Landing Page","Logo Design","Social Media Setup","Full Brand Package","Not sure yet"]},
   {b:"Excellent. What is your timeline?",o:["ASAP (1–2 weeks)","Within a month","2–3 months","Just exploring"]},
@@ -523,10 +481,10 @@ function showO(opts){const b=document.getElementById('pb'),d=document.createElem
 function pick(v,el){el.remove();ans.push(v);addM('user',v);step++;setTimeout(()=>next(),500);}
 function next(){if(step<flow.length){const s=flow[step];addT();setTimeout(()=>{rmT();addM('bot',s.b);if(s.o)setTimeout(()=>showO(s.o),400);if(s.free){document.getElementById('pinp').style.display='flex';setTimeout(()=>document.getElementById('pi').focus(),100);}},900);}}
 function sf(){const i=document.getElementById('pi'),v=i.value.trim();if(!v)return;i.value='';document.getElementById('pinp').style.display='none';ans.push(v);addM('user',v);addT();
-  setTimeout(()=>{rmT();
-    // Auto-send AI quote via WhatsApp too
+  setTimeout(()=>{
+    rmT();
     const msg=`*AI Quote Request — Star Link Media*\n\n*Contact:* ${v}\n*Service:* ${ans[0]}\n*Timeline:* ${ans[1]}\n*Budget:* ${ans[2]}`;
-    addM('bot',`Thank you, ${v.split(',')[0].split(' ')[0]||'there'}. ✦\n\nService: ${ans[0]}\nTimeline: ${ans[1]}\nBudget: ${ans[2]}\n\nTap the button below to send this to us instantly on WhatsApp, or we'll follow up today at +592 763-9325 🇬🇾`);
+    addM('bot',`Thank you, ${v.split(',')[0].split(' ')[0]||'there'}. ✦\n\nService: ${ans[0]}\nTimeline: ${ans[1]}\nBudget: ${ans[2]}\n\nWe'll follow up today at +592 763-9325 🇬🇾`);
     setTimeout(()=>{
       const b=document.getElementById('pb');
       const btn=document.createElement('button');
@@ -541,4 +499,4 @@ function addT(){const b=document.getElementById('pb'),t=document.createElement('
 function rmT(){const t=document.getElementById('typ');if(t)t.remove();}
 </script>
 </body>
-                                                    </html>
+                                                        </html>
